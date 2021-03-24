@@ -1,0 +1,12 @@
+name: Akash Pawara
+bio: |
+  Written by You. This is where your author bio lives. Share your work, your
+  joys and of course, your Twitter handle.
+avatar: ./avatars/akash.jpg
+social:
+  - url: https://twitter.com/akash_pawara_
+  - url: https://github.com/akashpawara
+  - url: https://instagram.com/akash_pawara_
+  - url: https://www.linkedin.com/in/akashpawara/
+  - url: https://medium.com/@akashpawara
+featured: true
