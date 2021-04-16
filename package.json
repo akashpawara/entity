@@ -1,67 +1,22 @@
 {
-  "name": "gatsby-theme-novela-workspace",
   "private": true,
-  "version": "0.0.1",
-  "main": "index.js",
+  "name": "entity",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "yarn workspace www build",
-    "dev": "yarn start",
-    "lint": "eslint --ignore-path .gitignore .",
-    "start": "yarn workspace www develop",
-    "bootstrap": "yarn lerna bootstrap",
-    "publish": "yarn lerna version && yarn lerna publish"
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "clean": "gatsby clean",
+    "proxy": "netlify-cms-proxy-server"
   },
-  "workspaces": [
-    "@narative/gatsby-theme-novela",
-    "www"
-  ],
-  "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
-    "@commitlint/travis-cli": "^8.1.0",
-    "eslint": "^6.2.2",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-unicorn": "^10.0.0",
-    "husky": "^3.0.4",
-    "lerna": "^3.16.4",
-    "prettier": "^1.18.2"
-  },
-  "eslintConfig": {
-    "extends": [
-      "airbnb-base",
-      "plugin:prettier/recommended",
-      "plugin:unicorn/recommended"
-    ],
-    "env": {
-      "browser": false
-    },
-    "overrides": [],
-    "plugins": [],
-    "rules": {
-      "unicorn/no-abusive-eslint-disable": 0,
-      "unicorn/filename-case": [
-        "error",
-        {
-          "cases": {
-            "camelCase": true,
-            "kebabCase": true
-          }
-        }
-      ]
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "all"
+  "dependencies": {
+    "@narative/gatsby-theme-novela": "^0.*",
+    "gatsby": "^2.13.41",
+    "gatsby-plugin-manifest": "^2.2.4",
+    "gatsby-plugin-netlify-cms": "^4.1.40",
+    "netlify-cms-app": "^2.11.23",
+    "netlify-cms-proxy-server": "^1.1.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
